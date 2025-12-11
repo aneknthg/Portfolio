@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience &amp; Leadership — Anek Anjireddy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-bg text-gray-900">
+  <header class="site-header sticky top-0 z-50">
+    <div class="container">
+      <a class="brand" href="index.html">Anek <span class="brand-dot">.</span></a>
+      <nav class="nav-desktop hidden md:flex items-center gap-6">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="extracurriculars.html" class="nav-link">Extracurriculars</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+      <button id="hamburger" aria-label="Menu" class="md:hidden"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <!-- <div id="mobileMenu" class="mobile-menu hidden">
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="skills.html" class="mobile-link">Skills</a>
+      <a href="projects.html" class="mobile-link">Projects</a>
+      <a href="experience.html" class="mobile-link">Experience</a>
+      <a href="contact.html" class="mobile-link mobile-cta">Contact</a>
+    </div> -->
+  </header>
+
+  <main class="container py-16">
+    <div class="text-center mb-12">
+      <h2 class="section-title text-3xl font-bold text-gray-900">Projects</h2>
+    </div>
+
+    <div class="space-y-10">
+
+            <!-- Project 1 -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 border border-gray-100 rounded-lg bg-gray-50 card-hover transition duration-300">
+                <div class="lg:col-span-1">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Garbage Classification Using Deep Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Computer Vision • Transfer Learning • Convolutional Based Attention Module (CBAM) • Keras/TensorFLow </span>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 text-gray-700">
+                    <p class="mb-3">I built a deep-learning garbage-classification system capable of recognizing multiple waste categories to support automated recycling workflows. 
+                                    Using a staged training process and attention-augmented CNN architecture, the model achieved strong test-set performance (high accuracy and stable
+                                    convergence across classes) while remaining lightweight and deployable. Key findings included the value of attention mechanisms for distinguishing 
+                                    visually similar materials and the effectiveness of gradual fine-tuning in improving generalization without overfitting.</p>
+                                        <!-- Image Section -->
+                    <div class="my-4">
+                        <img src="Garbage_Classification_Paper.pdf" 
+                            alt="Garbage Classification Model Preview"
+                            class="rounded-lg shadow-md w-full object-cover">
+                    </div>
+                    <p class="mb-3">The model is based on an EfficientNet backbone (e.g., B0/B3) with the top removed and a CBAM attention module inserted to enhance spatial and channel-wise feature
+                                    focus. A compact classifier head with global average pooling and dropout completes the network. Training is performed in two phases—first freezing the backbone, 
+                                    then progressively unfreezing deeper layers with a warmup + cosine-decay learning rate schedule. Data is ingested through optimized tf.data pipelines with 
+                                    augmentation, and the entire system is modular, configurable, and optimized with mixed-precision for efficient deployment.</p>
+                    <div class="mt-4">
+                        <a href="https://github.com/aneknthg/Garbage-Classification.git" class="text-sm font-medium text-blue-600 hover:text-blue-800 mr-4 flex items-center inline-flex">
+                            <i data-lucide="github" class="w-4 h-4 mr-1"></i> View Code (Repo Link)
+                        </a>
+                        <a href="https://drive.google.com/file/d/1Eo0tdpWejriBkFsx0kfi1iLaeJDhJ0Pa/view?usp=sharing" class="text-sm font-medium text-blue-600 hover:text-blue-800 mr-4 flex items-center inline-flex">
+                            <i data-lucide="github" class="w-4 h-4 mr-1"></i> Read Academic Paper (PDF Link)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 border border-gray-100 rounded-lg bg-gray-50 card-hover transition duration-300">
+                <div class="lg:col-span-1">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">Stock Price Predictor</h3>
+                    <p class="text-sm font-semibold text-gray-500 mb-3">Time Series Modelling</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">SARIMA • Holt-Winters • ADF • Python &amp; R</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 text-gray-700">
+                    <p class="mb-3">I developed a time-series forecasting system designed to model long-term trends and seasonal patterns in ICICI Bank's monthly stock prices.
+                                    The system evaluates both SARIMA and Holt-Winters Exponential Smoothing to determine the most reliable predictor for financial time-series behavior.  
+                                    The Holt-Winters model provided significantly stronger performance, achieving lower RMSE and MAE values and delivering more stable, seasonally  consistent forecasts.</p>         
+                    <div class="my-4">
+                        <img src="ICICI.png" 
+                            alt="Stock Price Predictor Reults"
+                            class="rounded-lg shadow-md w-full object-cover">
+                    </div>                                                              
+                    <p class="mb-3">The forecasting pipeline is built around a clean, modular architecture beginning with monthly resampling, preprocessing, and decomposition of historical stock data to isolate trend, seasonal, and residual components. 
+                                    SARIMA models were tuned using an exhaustive grid search over seasonal and non-seasonal orders, while the Holt-Winters approach was configured with multiplicative trend and seasonal factors to match the stock’s evolving scale. Model performance was evaluated using standard metrics and visual forecast comparisons, with the results consistently favoring Holt-Winters for this dataset. </p>                                   
+                    <div class="mt-4">
+                        <a href="https://github.com/aneknthg/ICICI-Stock-Price-Prediction.git" class="text-sm font-medium text-blue-600 hover:text-blue-800 mr-4 flex items-center inline-flex">
+                            <i data-lucide="github" class="w-4 h-4 mr-1"></i> View Code (Repo Link)
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 border border-gray-100 rounded-lg bg-gray-50 card-hover transition duration-300">
+                    <div class="lg:col-span-1">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-2">Heart Health Chatbot</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Generative AI / ML/DL</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">GenAI</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">RAG Pipeline</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">BM25</span>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 text-gray-700">
+                        <p class="mb-3">Developed a powerful GenAI-powered chatbot for heart disease risk prediction using integrated ML/DL models.</p>
+                        <p>Implemented a Retrieval-Augmented Generation (RAG) pipeline incorporating BM25 and distributed retrieval chains for domain-specific, contextual QnA capabilities, enhancing diagnostic accuracy.</p>
+                        <div class="mt-4">
+                            <a href="https://github.com/lmaomkar/heart_risk_prediction" class="text-sm font-medium text-blue-600 hover:text-blue-800 mr-4 flex items-center inline-flex">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i> View Code (Repo Link)
+                            </a>
+                        </div>
+                    </div>
+            </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p>&copy; 2025 Anek Anjireddy • Built with HTML &amp; Tailwind</p>
+    </div>
+  </footer>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anek Anjireddy | Portfolio — Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-bg text-gray-900">
+  <!-- Header -->
+  <header class="site-header sticky top-0 z-50">
+    <div class="container">
+      <a class="brand" href="index.html">Anek <span class="brand-dot">.</span></a>
+
+      <nav class="nav-desktop hidden md:flex items-center gap-6">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="extracurriculars.html" class="nav-link">Extracurriculars</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+
+      <button id="hamburger" aria-label="Menu" class="md:hidden"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <!-- mobile nav -->
+    <!-- <div id="mobileMenu" class="mobile-menu hidden">
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="skills.html" class="mobile-link">Skills</a>
+      <a href="projects.html" class="mobile-link">Projects</a>
+      <a href="experience.html" class="mobile-link">Experience</a>
+      <a href="contact.html" class="mobile-link mobile-cta">Contact</a>
+    </div> -->
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero grid md:grid-cols-2 gap-8 items-center py-20">
+      <div>
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 class="hero-title">Anek Anjireddy</h1>
+        <p class="hero-sub">Final Year B.Tech Electrical Engineering at <strong>IIT Hyderabad</strong></p>
+        <p class="hero-desc">I build high-performance systems and apply Deep Learning &amp; Generative AI to solve complex, real-world problems.</p>
+
+        <div class="btn-row">
+          <a href="projects.html" class="btn-primary"><i data-lucide="rocket" class="icon"></i> View Projects</a>
+          <a href="contact.html" class="btn-outline"><i data-lucide="mail" class="icon"></i> Get In Touch</a>
+        </div>
+      </div>
+
+      <div class="profile-wrap">
+        <div class="profile-outer">
+          <img src="anek_portfolio.JPG" alt="Anek Anjireddy" onerror="this.onerror=null; this.src='https://placehold.co/400x400/06b6d4/ffffff?text=Anek'" class="profile-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Box -->
+    <section class="py-10">
+      <div class="bg-white/70 backdrop-blur-md shadow-xl rounded-2xl p-8 border border-gray-100 max-w-3xl mx-auto">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">About Me</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Hello! I'm Anek Anjireddy, a final year student at IIT Hyderabad with a deep fascination for Deep Learning and Generative AI. 
+          I enjoy building scalable, end-to-end AI/ML solutions particularly in the field of computer vision.
+          I am excited to work on new technology and aspire to use my techincal skills to create sustainable and effective solutions to real world issues. Explore this website to learn more about my research projects, and experiences!
+        </p>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p>&copy; 2025 Anek Anjireddy • Built with HTML &amp; Tailwind</p>
+    </div>
+  </footer>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>

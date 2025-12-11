@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anek Anjireddy | Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom font import for a modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f7f9fc; /* Light background for the whole site */
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background-color: #3b82f6; /* Blue underline */
+            border-radius: 9999px;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-900 tracking-tight">Anek Anjireddy</a>
+            <div class="hidden md:flex space-x-8 text-gray-600">
+                <a href="#about" class="hover:text-blue-600 transition duration-300">About</a>
+                <a href="#skills" class="hover:text-blue-600 transition duration-300">Skills</a>
+                <a href="#projects" class="hover:text-blue-600 transition duration-300">Projects</a>
+                <a href="#experience" class="hover:text-blue-600 transition duration-300">Experience</a>
+                <a href="#contact" class="hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- 1. Hero Section -->
+        <section id="home" class="py-20 md:py-32 flex flex-col md:flex-row items-center justify-between min-h-screen-1/2">
+            <div class="md:w-3/5 text-center md:text-left">
+                <p class="text-lg text-blue-600 font-semibold mb-2">Hello, I'm</p>
+                <h1 class="text-5xl sm:text-7xl font-extrabold text-gray-900 leading-tight mb-4">Anek Anjireddy</h1>
+                <h2 class="text-2xl sm:text-3xl text-gray-700 mb-6">
+                    Final Year B.Tech Electrical Engineering at <span class="text-blue-600 font-semibold">IIT Hyderabad</span>
+                </h2>
+                <p class="text-xl text-gray-500 max-w-xl mx-auto md:mx-0 mb-8">
+                    Driven by a passion for creating high-performance systems and applying Deep Learning & Generative AI to solve complex real world problems across diverse domains.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-blue-600 hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        <i data-lucide="rocket" class="w-5 h-5 mr-2"></i> View Projects
+                    </a>
+                    <a href="mailto:me22btech11039@iith.ac.in" class="inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-full text-gray-700 bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                        <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Get In Touch
+                    </a>
+                </div>
+            </div>
+            <!-- Profile Picture -->
+            <div class="mt-12 md:mt-0 md:w-2/5 flex justify-center">
+                <div class="w-64 h-64 rounded-full shadow-2xl overflow-hidden border-4 border-blue-300">
+                    <img src="anek_portfolio.JPG" 
+                         alt="Anek Anjireddy Profile Picture" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/256x256/4f46e5/ffffff?text=Omkar';" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about" class="py-16 md:py-24 bg-white rounded-xl shadow-lg mb-12">
+            <div class="text-center">
+                <h2 class="section-title text-3xl font-bold text-gray-900 mb-10">About Me & Education</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 p-6">
+                <!-- Academic Summary -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 mr-2 text-blue-600"></i> Academic Journey
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-blue-500 shadow-sm">
+                            <p class="text-xl font-bold text-gray-900">B.Tech, Mechanical and Aerospace Engineering</p>
+                            <p class="text-lg text-gray-600">IIT Hyderabad | Expected Graduation: 2026</p>
+                            <p class="text-sm text-gray-500 mt-1">CGPA: 7.59</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-blue-400 shadow-sm">
+                            <p class="text-lg font-semibold text-gray-900">HSC (XII) - Maharashtra Board</p>
+                            <p class="text-md text-gray-600">Novel International School, Pune (2022)</p>
+                            <p class="text-sm text-gray-500 mt-1">90.00%</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-blue-300 shadow-sm">
+                            <p class="text-lg font-semibold text-gray-900">CBSE (X)</p>
+                            <p class="text-md text-gray-600">Priyadarshani School, Pune (2020)</p>
+                            <p class="text-sm text-gray-500 mt-1">92.00%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scholastic Achievements -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center">
+                        <i data-lucide="trophy" class="w-6 h-6 mr-2 text-yellow-500"></i> Key Achievements
+                    </h3>
+                    <ul class="space-y-3 list-none p-0">
+                        <li class="flex items-start text-gray-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 mt-1 mr-3 text-green-500 flex-shrink-0"></i>
+                            <span class="font-medium">99 Percentile in JEE Advanced 2022</span> (AIR 4698)
+                        </li>
+                        <li class="flex items-start text-gray-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 mt-1 mr-3 text-green-500 flex-shrink-0"></i>
+                            <span class="font-medium">99.59 Percentile in MHT-CET.</span>
+                        </li>
+                        <li class="flex items-start text-gray-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 mt-1 mr-3 text-green-500 flex-shrink-0"></i>
+                            Above <span class="font-medium">99 Percentile in Physics and Chemistry in NEET 2022.</span>
+                        </li>
+                        <li class="flex items-start text-gray-700">
+                            <i data-lucide="check-circle" class="w-5 h-5 mt-1 mr-3 text-green-500 flex-shrink-0"></i>
+                            NDA, VIT, and BITSAT qualified.
+                        </li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-8 flex items-center">
+                        <i data-lucide="book-open-text" class="w-6 h-6 mr-2 text-red-500"></i> Relevant Courses
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                        <span class="font-semibold">CS:</span> Intro to Programming, AI, Parallel Computing.
+                        <br>
+                        <span class="font-semibold">Math:</span> Statistics, Linear Algebra, Calculus, Convex Optimisation.
+                        <br>
+                        <span class="font-semibold">Online:</span> Full Stack Web Dev, Stanford ML, Product Management.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills" class="py-16 md:py-24">
+            <div class="text-center">
+                <h2 class="section-title text-3xl font-bold text-gray-900 mb-10">Technical Skills & Toolkit</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Programming Languages -->
+                <div class="p-6 bg-white rounded-xl shadow-lg card-hover transition duration-300">
+                    <i data-lucide="code" class="w-8 h-8 text-blue-500 mb-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Languages</h3>
+                    <p class="text-gray-600">C++, Python, SQL, HTML/CSS, Javascript, Golang</p>
+                </div>
+                
+                <!-- Frameworks & Libraries -->
+                <div class="p-6 bg-white rounded-xl shadow-lg card-hover transition duration-300">
+                    <i data-lucide="box" class="w-8 h-8 text-green-500 mb-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">AI/ML & DL Frameworks</h3>
+                    <p class="text-gray-600">PyTorch, TensorFlow, Keras, OpenCV, CUDA, Scikit-learn, Pandas, Numpy, LTSpice</p>
+                </div>
+
+                <!-- Web & Data Tools -->
+                <div class="p-6 bg-white rounded-xl shadow-lg card-hover transition duration-300">
+                    <i data-lucide="server" class="w-8 h-8 text-red-500 mb-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Web & DevOps</h3>
+                    <p class="text-gray-600">Django, AWS (EC2, S3), Docker, CI/CD, Git, Jupyter Notebook</p>
+                </div>
+                
+                <!-- Utilities & Software -->
+                <div class="p-6 bg-white rounded-xl shadow-lg card-hover transition duration-300">
+                    <i data-lucide="tool" class="w-8 h-8 text-yellow-500 mb-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Tools & Software</h3>
+                    <p class="text-gray-600">Power BI, Tableau, Microsoft 360, Linux, <span style="font-family:serif;">L<span style="text-transform:uppercase; vertical-align:-0.5ex; margin-left:-0.1em; margin-right:-0.15em;">a</span>T<span style="text-transform:uppercase; vertical-align:0.5ex; margin-left:-0.15em; margin-right:-0.1em;">e</span>X</span>, Arduino, Mathematica</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Section -->
+        <section id="projects" class="py-16 md:py-24 bg-white rounded-xl shadow-lg mb-12 p-8">
+            <div class="text-center">
+                <h2 class="section-title text-3xl font-bold text-gray-900 mb-10">Featured Projects</h2>
+                <p class="text-lg text-gray-600 mb-12">Showcasing my work in Generative AI, Deep Learning, and Systems Engineering.</p>
+            </div>
+
+            <div class="space-y-10">
+                
+                <!-- Project 1: Heart Health Chatbot -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 border border-gray-100 rounded-lg bg-gray-50 card-hover transition duration-300">
+                    <div class="lg:col-span-1">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-2">Heart Health Chatbot</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Generative AI / ML/DL</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">GenAI</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">RAG Pipeline</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">BM25</span>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 text-gray-700">
+                        <p class="mb-3">Developed a powerful GenAI-powered chatbot for heart disease risk prediction using integrated ML/DL models.</p>
+                        <p>Implemented a Retrieval-Augmented Generation (RAG) pipeline incorporating BM25 and distributed retrieval chains for domain-specific, contextual QnA capabilities, enhancing diagnostic accuracy.</p>
+                        <div class="mt-4">
+                            <a href="https://github.com/lmaomkar/heart_risk_prediction" class="text-sm font-medium text-blue-600 hover:text-blue-800 mr-4 flex items-center inline-flex">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i> View Code (Repo Link)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Xv6 Signals Extension -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 border border-gray-100 rounded-lg bg-gray-50 card-hover transition duration-300">
+                    <div class="lg:col-span-1">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-2">Xv6 Signals Extension</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Operating Systems / Kernel Dev</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">xv6 Kernel</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">System Calls</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">C/OS</span>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 text-gray-700">
+                        <p class="mb-3">Successfully implemented Unix-style signal handling within the xv6 kernel by adding custom system calls: `raise()`, `signal()`, `sigprocmask()`, and `sigreturn()`.</p>
+                        <p>This project enabled user-level processes to register and execute custom signal handlers, providing deep insight into low-level operating system mechanics and interrupt handling.</p>
+                        <div class="mt-4">
+                            <a href="https://github.com/lmaomkar/xv6" class="text-sm font-medium text-blue-600 hover:text-blue-800 mr-4 flex items-center inline-flex">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i> View Code (Repo Link)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Stock Price Predictor -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 border border-gray-100 rounded-lg bg-gray-50 card-hover transition duration-300">
+                    <div class="lg:col-span-1">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-2">Stock Price Predictor</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Deep Learning / Finance</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Transformer Arch</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Multi-Head Attention</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Dashboard</span>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 text-gray-700">
+                        <p class="mb-3">Built a stock price prediction model using a custom Transformer architecture to forecast short-term price movements, focusing on positional encoding and multi-head attention mechanisms.</p>
+                        <p>Utilized historical data from Yahoo Finance and developed a data visualization dashboard to compare stock predictions with competitors and provide market insights.</p>
+                        <div class="mt-4">
+                            <a href="https://github.com/lmaomkar/stock_prediction" class="text-sm font-medium text-blue-600 hover:text-blue-800 mr-4 flex items-center inline-flex">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i> View Code (Repo Link)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: High-Concurrency Ticketing System -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 border border-gray-100 rounded-lg bg-gray-50 card-hover transition duration-300">
+                    <div class="lg:col-span-1">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-2">High-Concurrency Ticketing</h3>
+                        <p class="text-sm font-semibold text-gray-500 mb-3">Backend Development / Go / DevOps</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Golang</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Postgres/Redis/Kafka</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Concurrency</span>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 text-gray-700">
+                        <p class="mb-3">Engineered a robust, high-concurrency ticketing backend in **Go** to handle intense load and ensure data integrity under concurrent access.</p>
+                        <p>Integrated critical modern infrastructure components: Postgres (database), Redis (caching), Kafka (message queuing), Prometheus (monitoring), and Swagger (API documentation).</p>
+                        <div class="mt-4">
+                            <a href="https://github.com/lmaomkar/High-Concurrency_Ticketing_Backend" class="text-sm font-medium text-blue-600 hover:text-blue-800 mr-4 flex items-center inline-flex">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i> View Code (Repo Link)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gray-800 hover:bg-gray-700 transition duration-300">
+                    See All Projects
+                </a>
+            </div>
+
+        </section>
+
+        <!-- 5. Experience & Responsibility Section -->
+        <section id="experience" class="py-16 md:py-24">
+            <div class="text-center">
+                <h2 class="section-title text-3xl font-bold text-gray-900 mb-10">Experience & Leadership</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Startup Experience -->
+                <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-yellow-500 card-hover transition duration-300">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="zap" class="w-6 h-6 text-yellow-600 mr-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Co-founder, Tanva.in</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Men's jewellery startup (Full-Stack & E-commerce)</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 pl-4">
+                        <li>Responsible for building the entire e-commerce website infrastructure.</li>
+                        <li>Managed critical integrations: Delhivery (Logistics), Razorpay (Payments), wooCommerce (Platform), and mailchimp (CRM/Emails).</li>
+                        <li>Implemented user feedback forms to drive product and experience improvements.</li>
+                    </ul>
+                </div>
+                
+                <!-- Leadership Roles -->
+                <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-red-500 card-hover transition duration-300">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="megaphone" class="w-6 h-6 text-red-600 mr-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">Positions of Responsibility</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Leadership and Management Roles at IIT Hyderabad</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 pl-4">
+                        <li>PR, Design and Multimedia Coordinator (MAE Dept. Day): Successfully managed social media and campaigns, leading to sales of almost 200 merchandise articles.</li>
+                        <li>Core member of LitSoc: Actively organise literary events (books, movies, trivia, debate) for the IITH community.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-blue-600 rounded-xl shadow-xl mb-12 text-white">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-4">Let's Connect</h2>
+                <p class="text-lg mb-8 opacity-90">I am actively seeking opportunities in Deep Learning, Backend, and Product Development.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="mailto:me22btech11039@iith.ac.in" class="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md transform hover:scale-105 inline-flex items-center">
+                        <i data-lucide="mail" class="w-5 h-5 mr-2"></i> me22btech11039@iith.ac.in
+                    </a>
+                    <a href="tel:+919579476247" class="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md transform hover:scale-105 inline-flex items-center">
+                        <i data-lucide="phone" class="w-5 h-5 mr-2"></i> +91 95794 76247
+                    </a>
+                    <!-- Placeholder for GitHub/LinkedIn -->
+                    <a href="https://www.linkedin.com/in/omkar-sakhare/" target="_blank" class="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md transform hover:scale-105 inline-flex items-center">
+                        <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i> LinkedIn Profile
+                    </a>
+                    <a href="https://github.com/lmaomkar" target="_blank" class="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md transform hover:scale-105 inline-flex items-center">
+                        <i data-lucide="github" class="w-5 h-5 mr-2"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            &copy; 2025 Anek Anjireddy. All rights reserved. | Built with HTML & Tailwind CSS.
+            <p class="mt-2 text-gray-400">B.Tech Mechanical and Aerospace Engineering, IIT Hyderabad</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

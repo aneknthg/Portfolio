@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Anek Anjireddy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-bg text-gray-900">
+  <header class="site-header sticky top-0 z-50">
+    <div class="container">
+      <a class="brand" href="index.html">Anek <span class="brand-dot">.</span></a>
+      <nav class="nav-desktop hidden md:flex items-center gap-6">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="extracurriculars.html" class="nav-link">Extracurriculars</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+      <button id="hamburger" aria-label="Menu" class="md:hidden"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <!-- <div id="mobileMenu" class="mobile-menu hidden">
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="skills.html" class="mobile-link">Skills</a>
+      <a href="projects.html" class="mobile-link">Projects</a>
+      <a href="experience.html" class="mobile-link">Experience</a>
+      <a href="contact.html" class="mobile-link mobile-cta">Contact</a>
+    </div> -->
+  </header>
+
+  <main class="container py-16">
+    <div class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-extrabold">About Me</h1>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      <!-- Left column: About card & Resume summary -->
+      <div class="lg:col-span-2 space-y-6">
+
+        <!-- Glass/about card -->
+        <!-- <section class="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-gray-100 shadow-lg">
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div class="flex-shrink-0">
+              <div class="w-28 h-28 rounded-full overflow-hidden border-4 border-gray-100 shadow-md">
+                <img src="anek_portfolio.JPG" alt="Anek profile" onerror="this.onerror=null; this.src='https://placehold.co/300x300/06b6d4/ffffff?text=Anek'" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">Anek Anjireddy</h2>
+              <p class="text-muted mt-1">Final Year B.Tech — Electrical Engineering, IIT Hyderabad</p>
+              <p class="mt-4 text-gray-700 leading-relaxed">I’m an engineer focused on applying Deep Learning and Generative AI to real problems. I also enjoy building robust backend systems and end-to-end products — combining research, code and product thinking. I mentor juniors, lead student projects, and contribute to open-source when time permits.</p>
+
+              <div class="mt-4 flex flex-wrap gap-3">
+                <a class="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold" href="assets/Anek_Resume.pdf" download>
+                  <i data-lucide="download" class="w-4 h-4"></i> Download Resume
+                </a>
+                <a class="inline-flex items-center gap-2 border border-gray-200 px-4 py-2 rounded-full text-sm font-medium" href="mailto:me22btech11039@iith.ac.in">
+                  <i data-lucide="mail" class="w-4 h-4"></i> Contact
+                </a>
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+    <!-- Resume Section -->
+    <section class="py-10">
+      <div class="max-w-3xl mx-auto space-y-6">
+
+        <!-- Resume Download Button -->
+        <div class="bg-white/70 backdrop-blur-md shadow-lg rounded-2xl p-6 border border-gray-100 text-center">
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">My Resume</h3>
+          <a href="https://drive.google.com/file/d/1zEXa-zyMJe9UMWnMzFJlxWGorVQrbTDt/view?usp=sharing" download class="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:scale-105 transition">
+            <i data-lucide="download" class="w-5 h-5"></i>
+            Download Resume
+          </a>
+        </div>
+
+        <!-- Resume Summary Box -->
+        <div class="bg-white/70 backdrop-blur-md shadow-xl rounded-2xl p-8 border border-gray-100">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Quick Summary</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li>Education: Final Year B.Tech Electrical Engineering student at IIT Hyderabad</li>
+            <li>Technical Skills: Python, Tensorflow/Keras, Pytorch, Computer Vision, Transformers, RAGs </li>
+            <li>Leadership: Head of Sponsorship at Elan &amp; nVision, Head of Writing Club, IIT Hyderabad</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+        <!-- Education & Academic summary -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <h3 class="font-semibold text-lg">Education</h3>
+            <p class="text-muted mt-2">B.Tech — Electrical Engineering, IIT Hyderabad</p>
+            <p class="text-gray-700 mt-2">CGPA: 7.7</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <h3 class="font-semibold text-lg">Scholastic Achievements</h3>
+            <ul class="mt-2 text-gray-700 space-y-2">
+              <li>JEE Mains 2022 - scored 99.5 percentile among over 1 million students</li>
+              <li>JEE Advanced - Ranked 1733 among over 100,000 candidates</li>
+              <li>NTSE 2020 - Ranked 6th Overall in Telangana State</li>
+            </ul>
+          </div>
+        </section>
+
+
+      </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h4 class="font-semibold mb-2">Personal Details</h4>
+          <ul class="text-gray-700 text-sm space-y-2">
+            <li>Final Year, IIT Hyderabad</li>
+            <li>Open to full time employment, internships & research roles in the US</li>
+            <li>US Green Card holder</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p>&copy; 2025 Anek Anjireddy • Built with HTML &amp; Tailwind</p>
+    </div>
+  </footer>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>

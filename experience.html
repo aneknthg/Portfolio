@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience &amp; Leadership — Anek Anjireddy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="page-bg text-gray-900">
+  <header class="site-header sticky top-0 z-50">
+    <div class="container">
+      <a class="brand" href="index.html">Anek <span class="brand-dot">.</span></a>
+      <nav class="nav-desktop hidden md:flex items-center gap-6">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="extracurriculars.html" class="nav-link">Extracurriculars</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+      <button id="hamburger" aria-label="Menu" class="md:hidden"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <!-- <div id="mobileMenu" class="mobile-menu hidden">
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="skills.html" class="mobile-link">Skills</a>
+      <a href="projects.html" class="mobile-link">Projects</a>
+      <a href="experience.html" class="mobile-link">Experience</a>
+      <a href="contact.html" class="mobile-link mobile-cta">Contact</a>
+    </div> -->
+  </header>
+
+  <main class="container py-16">
+    <div class="text-center mb-12">
+      <h2 class="section-title text-3xl font-bold text-gray-900">Experience</h2>
+    <div class="space-y-10">
+
+      <!-- Experience Item 1: Co-founder, Tanva.in -->
+      <article class="experience-item grid grid-cols-1 lg:grid-cols-12 gap-6 items-center p-6 bg-white rounded-2xl shadow-md">
+        <div class="lg:col-span-7 lg:pr-6">
+          <h3 class="text-2xl font-bold text-gray-800">Software Engineering Intern - AI/ML</h3>
+          <p class="text-sm text-muted mb-4">Tech Mahindra</p>
+          <div class="text-gray-700 space-y-3">
+            <p>Built and deployed time series regression models for predictive analytics, integrating Flask APIs for real-time inference</p>
+            <p>Integrated Evidently AI dashboards to monitor drift, regression accuracy (MAE, RMSE, MAPE), and feature-level anomalies in real time.</p>
+            <p>Designed a Grafana dashboard to track system metrics (CPU, memory, resource usage), improving end-to-end observability.</p>
+            <p>Automated data ingestion and monitoring pipeline with Python, MQTT, and MongoDB, enabling proactive detection of performance degradation.<p>
+          </div>
+        </div>
+
+      <!-- Experience Item 2: Positions of Responsibility -->
+
+        <div class="lg:col-span-7 lg:pl-6">
+          <h3 class="text-2xl font-bold text-gray-800">Artifical Intelligence Research Assistant</h3>
+          <p class="text-sm text-muted mb-4">Video &amp; Image Analysis Lab - IIT Hyderabad</p>
+          <div class="text-gray-700 space-y-3">
+            <p>Conducted an in-depth literature survey on deepfake detection methods and translated key insights into prototype RNN (GRU/LSTM) models.</p>
+            <p>Developed an end-to-end pipeline for deepfake video analysis, including frame extraction, face detection, and optical-flow feature generation.</p>
+            <p> Worked with the FaceForensics++ Dataset and achieved a 93% accuracy in detecting manipulated videos using a ConvLSTM Model.</p>
+          </div>
+        </div>
+    </article>
+
+      <!-- Add more items as needed -->
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p>&copy; 2025 Anek Anjireddy • Built with HTML &amp; Tailwind</p>
+    </div>
+  </footer>
+
+  <script src="assets/scripts.js"></script>
+</body>
+</html>
