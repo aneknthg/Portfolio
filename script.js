@@ -9,7 +9,7 @@ const PROFILE = {
   name: "Anek Anjireddy",
   badge: "New grad",                 // small pill under the avatar, e.g. "STUDENT", "ENGINEER"
   location: "Austin, Texas",
-  bio: "Hey, I'm Anek, a recent graduate from the Indian Institute of Technology, Hyderabad, with a passion for Machine Learning and it's application in the real world. Currently exploring Uncertainty Quantification in AI Assisted Medical Imaging. Yes this website is a play on Letterboxd.",
+  bio: "Hey, I'm Anek, a recent graduate from the Indian Institute of Technology, Hyderabad, with a passion for Machine Learning and it's application in the real world. Currently exploring Uncertainty Quantification in AI Assisted Medical Imaging.",
   avatar: "images/avatar.jpg",                     // "images/avatar.jpg"
 
   // contact boxes (below name, above bio)
@@ -33,30 +33,31 @@ const PROJECTS = [
   },
   {
     id: "project-2",
-    title: "Time Series Forecasting of ICICI Bank Stock Prices",
-    year: "2024",
-    tags: ["Time Series", "Financial Forecasting", "SARIMA", "Holt-Winters"],
-    summary: "Placeholder summary text for the second project. Swap this out for the real description later.",
-    description: "Developed a monthly time-series forecasting pipeline for ICICI Bank stock prices using historical market data. The project included monthly resampling, missing-value handling, exploratory analysis, and moving-average trend analysis. Performed time-series diagnostics using Augmented Dickey-Fuller tests, first-order differencing, seasonal decomposition, and ACF/PACF analysis to evaluate stationarity, trends, and seasonal behavior. Implemented a SARIMA forecasting model with exhaustive grid search across non-seasonal and seasonal parameters, selecting the configuration using Akaike Information Criterion. Also implemented multiplicative Holt-Winters Exponential Smoothing with 12-month seasonality. The models were compared using an 80/20 chronological train-test split, with Holt-Winters producing lower RMSE and MAE.",
-    thumb: "images/Project2_Thumbnail.jpg",
-    images: ["images/Project2_Image1.png", "images/Project2_Image2.png"],
-    github: "https://github.com/aneknthg/ICICI-Stock-Price-Prediction.git"
-  },
-  {
-    id: "project-3",
     title: "AI-Powered Deep Agent Workflow for Medicaid Analytics",
-    year: "2023",
+    year: "2026",
     tags: ["AWS", "SQL", "Python", "Data Analysis"],
     summary: "Built a Bedrock-based multi-agent analytics workflow that converts natural-language Medicaid queries into SQL analysis and identifies discrepancies across datasets.",
     description: "Developed an end-to-end AI data-analysis pipeline on Amazon Bedrock for detecting Medicaid URA discrepancies. The workflow combines entity extraction, context-aware SQL generation, Oracle database retrieval, and hybrid discrepancy reporting. Designed modular agents for use-case analysis, SQL generation, comparison, and orchestration to translate natural-language business queries into executable Oracle SQL and actionable insights. Integrated Oracle Database with connection pooling and schema-aware, parameterized SQL generation across claims, payment, and program datasets. Built a hybrid comparison engine combining SQL, statistical Python processing, and LLM-generated insights to identify time-based, category-based, and cross-dataset discrepancies. Six schema-management strategies reduced LLM context usage by 90%, from 50K to 5K tokens.",
     thumb: "images/Project3_Thumbnail.jpg",
     images: ["images/Project3_Image1.png"],
-    github: "https://github.com/aneknthg/Agent-code.git",
+    github: "https://github.com/aneknthg/Agent-code.git"
+  },
+  {
+    id: "project-3",
+    title: "Time Series Forecasting of ICICI Bank Stock Prices",
+    year: "2025",
+    tags: ["Time Series", "Financial Forecasting", "SARIMA", "Holt-Winters"],
+    summary: "Developed and compared SARIMA and Holt-Winters models for monthly ICICI Bank stock-price forecasting, with Holt-Winters achieving lower forecasting error.",
+    description: "Developed a monthly time-series forecasting pipeline for ICICI Bank stock prices using historical market data. The project included monthly resampling, missing-value handling, exploratory analysis, and moving-average trend analysis. Performed time-series diagnostics using Augmented Dickey-Fuller tests, first-order differencing, seasonal decomposition, and ACF/PACF analysis to evaluate stationarity, trends, and seasonal behavior. Implemented a SARIMA forecasting model with exhaustive grid search across non-seasonal and seasonal parameters, selecting the configuration using Akaike Information Criterion. Also implemented multiplicative Holt-Winters Exponential Smoothing with 12-month seasonality. The models were compared using an 80/20 chronological train-test split, with Holt-Winters producing lower RMSE and MAE.",
+    thumb: "images/Project2_Thumbnail.jpg",
+    images: ["images/Project2_Image1.png", "images/Project2_Image2.png"],
+    github: "https://github.com/aneknthg/ICICI-Stock-Price-Prediction.git"
+
   },
   {
     id: "project-4",
     title: "Garbage Classification with Attention-Augmented CNNs",
-    year: "2023",
+    year: "2025",
     tags: ["Transfer Learning", "Attention Mechanisms", "TensorFlow"],
     summary: "Built an attention-augmented garbage image classification system using EfficientNetB0 and CBAM, achieving up to 95% test accuracy on an independent dataset.",
     description: "Developed an end-to-end garbage classification pipeline using transfer learning with an EfficientNetB0 backbone and a custom Convolutional Block Attention Module (CBAM) combining channel and spatial attention. Implemented CBAM as reusable TensorFlow layers and built a training pipeline using tf.data, stratified dataset splitting, on-the-fly image augmentation, mixed-precision training, and staged fine-tuning. The model was trained and validated on two independent garbage classification datasets to evaluate robustness across datasets. It achieved 92% test accuracy on TrashNet and 95% test accuracy with a 0.954 F1-score on the larger independent Garbage Images Dataset.",
@@ -77,7 +78,7 @@ const EXPERIENCE = [
     end: "July 2025",
     tags: ["Edge Computing", "Data Visualization", "Python"],
     description: "Worked with an international client to develop a data visualization dashboard for their edge computing platform.",
-    logo: null   // "images/company1-logo.jpg"
+    logo: "images/Tech_Mahindra_logo.svg"   // "images/company1-logo.jpg"
   },
   {
     role: "ML Research Assistant",
@@ -87,7 +88,7 @@ const EXPERIENCE = [
     end: "December 2025",
     tags: ["Computer Vision", "Feature Engineering", "PyTorch"],
     description: "Worked with Dr. Sumohana and PHD guide to develop a deepfake video detection model on the FaceForensics++ dataset.",
-    logo: null
+    logo: "images/IIT_Hyderabad_logo.svg"
   },
   {
     role: "Co-Founder & ML Head",
@@ -97,7 +98,7 @@ const EXPERIENCE = [
     end: "Present",
     tags: ["Vite", "React", "AWS"],
     description: "Co-founded and serve as ML Head of Afterhours, leading the development of a women only social platform.",
-    logo: null
+    logo: "images/Afterhours_logo.svg"
   }
   // The home page's right-hand timeline pulls role / company / dates
   // straight from this same array — no separate list to maintain.
@@ -204,7 +205,7 @@ function renderHome(){
               <div class="profile-bio">${PROFILE.bio}</div>
             </div>
 
-            <div class="section-label">Projects</div>
+            <div class="section-label">Recent Activity</div>
             <div class="activity-grid">
               ${recent.map(p => `
                 <a href="#/project/${p.id}">
