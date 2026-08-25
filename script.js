@@ -71,14 +71,15 @@ const PROJECTS = [
 
 const EXPERIENCE = [
   {
-    role: "Software Engineer Intern",
-    company: "Tech Mahindra",
+
+    role: "Co-Founder & ML Head",
+    company: "Afterhours",
     location: "Hyderabad, India",
-    start: "May 2025",
-    end: "July 2025",
-    tags: ["Edge Computing", "Data Visualization", "Python"],
-    description: "Worked with an international client to develop a data visualization dashboard for their edge computing platform.",
-    logo: "images/Tech_Mahindra_logo.svg"   // "images/company1-logo.jpg"
+    start: "March 2026",
+    end: "Present",
+    tags: ["Vite", "React", "AWS"],
+    description: "Co-founded and serve as ML Head of Afterhours, leading the development of a women only social platform.",
+    logo: "images/Afterhours_logo.svg"
   },
   {
     role: "ML Research Assistant",
@@ -91,14 +92,14 @@ const EXPERIENCE = [
     logo: "images/IIT_Hyderabad_logo.svg"
   },
   {
-    role: "Co-Founder & ML Head",
-    company: "Afterhours",
+    role: "Software Engineer Intern",
+    company: "Tech Mahindra",
     location: "Hyderabad, India",
-    start: "March 2026",
-    end: "Present",
-    tags: ["Vite", "React", "AWS"],
-    description: "Co-founded and serve as ML Head of Afterhours, leading the development of a women only social platform.",
-    logo: "images/Afterhours_logo.svg"
+    start: "May 2025",
+    end: "July 2025",
+    tags: ["Edge Computing", "Data Visualization", "Python"],
+    description: "Worked with an international client to develop a data visualization dashboard for their edge computing platform.",
+    logo: "images/Tech_Mahindra_logo.jpg"   // "images/company1-logo.jpg"    
   }
   // The home page's right-hand timeline pulls role / company / dates
   // straight from this same array — no separate list to maintain.
@@ -163,8 +164,7 @@ function header(activeTab){
   <header class="topbar">
     <div class="inner">
       <div class="topbar-row">
-        <a class="brand" href="#/"><span class="menu-glyph">&#9776;</span><span>${PROFILE.name}</span></a>
-        <span class="icon-btn">&#128269;</span>
+        <a class="brand" href="#/"><span>${PROFILE.name}</span></a>
       </div>
       <nav class="tabbar">
         ${tabs.map(t => `<a class="tab ${activeTab===t.key?'active':''}" href="${t.href}">${t.label}</a>`).join("")}
