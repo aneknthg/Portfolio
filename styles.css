@@ -1,0 +1,279 @@
+/* ============================================================
+   EDIT ME: colors / tokens
+   ============================================================ */
+:root{
+  --bg:        #14181c;
+  --bg-alt:    #1b2025;
+  --surface:   #1f262c;
+  --surface-2: #262e35;
+  --border:    #2c3440;
+  --text:      #eef2f3;
+  --text-dim:  #9ab0bd;
+  --text-mute: #64798a;
+  --green:     #00e054;
+  --green-dim: #14663c;
+  --orange:    #ff8000;
+  --blue:      #40bcf4;
+  --radius:    6px;
+  --maxw:      620px;
+  --maxw-home: 940px;
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--green);color:#04140a;}
+
+/* ---------- layout shell ---------- */
+#app{display:flex;flex-direction:column;min-height:100vh;}
+.inner{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 18px;}
+.home-inner{width:100%;max-width:var(--maxw-home);margin:0 auto;padding:0 18px;}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--bg-alt);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20;}
+.topbar-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0 14px;}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px;letter-spacing:.2px;cursor:pointer;}
+.brand .menu-glyph{font-size:18px;opacity:.85;line-height:1;}
+.brand:hover{color:var(--green);}
+.icon-btn{font-size:17px;opacity:.75;cursor:default;}
+
+.tabbar{display:flex;gap:26px;overflow-x:auto;scrollbar-width:none;}
+.tabbar::-webkit-scrollbar{display:none;}
+.tab{
+  padding:10px 2px 12px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.2px;
+  color:var(--text-mute);
+  white-space:nowrap;
+  border-bottom:2px solid transparent;
+  transition:color .15s ease;
+}
+.tab:hover{color:var(--text-dim);}
+.tab.active{color:var(--green);border-bottom-color:var(--green);}
+
+main{flex:1;padding-bottom:60px;}
+
+/* ---------- shared bits ---------- */
+.section-label{
+  font-size:11px;font-weight:700;letter-spacing:1.4px;color:var(--text-mute);
+  margin:30px 0 12px;text-transform:uppercase;
+}
+.empty-hint{
+  border:1px dashed var(--border);border-radius:var(--radius);
+  padding:14px 16px;color:var(--text-mute);font-size:12.5px;line-height:1.5;
+  background:rgba(255,255,255,.015);
+}
+.empty-hint code{color:var(--blue);font-family:'JetBrains Mono',monospace;font-size:11.5px;}
+
+.pill{
+  display:inline-flex;align-items:center;
+  font-size:11px;font-weight:600;letter-spacing:.3px;
+  color:var(--text-dim);background:var(--surface-2);
+  border:1px solid var(--border);border-radius:100px;
+  padding:4px 10px;
+}
+
+/* ---------- HOME / PROFILE PAGE ---------- */
+.home-grid{display:block;}
+.home-col-right{padding-top:34px;}
+
+.profile-hero{
+  display:flex;flex-direction:column;align-items:flex-start;text-align:left;
+  padding:34px 0 10px;
+}
+.avatar-wrap{position:relative;margin-bottom:16px;}
+.avatar{
+  width:104px;height:104px;border-radius:50%;
+  background:linear-gradient(155deg,var(--surface-2),var(--surface));
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:34px;font-weight:800;color:var(--text-mute);
+  overflow:hidden;
+}
+.avatar img{width:100%;height:100%;object-fit:cover;}
+.profile-badge{
+  position:absolute;bottom:-6px;right:-10px;
+  background:var(--surface);border:1px solid var(--border);
+  color:var(--text-dim);font-size:10px;font-weight:700;letter-spacing:.6px;
+  padding:4px 9px;border-radius:100px;
+}
+.profile-name{font-size:23px;font-weight:800;margin:2px 0 6px;}
+.profile-location{font-size:12.5px;color:var(--text-dim);display:flex;align-items:center;gap:5px;margin-bottom:16px;}
+
+.contact-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+  width:100%;max-width:380px;margin-bottom:18px;
+}
+.contact-box{
+  background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:11px 4px;text-align:center;
+  font-size:11px;font-weight:700;letter-spacing:.3px;color:var(--text-dim);
+  transition:border-color .15s ease,color .15s ease,transform .15s ease;
+}
+.contact-box:hover{border-color:var(--green);color:var(--green);transform:translateY(-1px);}
+
+.profile-bio{
+  max-width:440px;color:var(--text-dim);font-size:13.5px;line-height:1.65;
+}
+
+.activity-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px;
+}
+.more-link{
+  display:block;text-align:right;font-size:11px;font-weight:700;
+  letter-spacing:1px;color:var(--text-mute);margin-top:12px;
+}
+.more-link:hover{color:var(--green);}
+
+.skills-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+.skills-group{margin-bottom:16px;}
+.skills-group-label{font-size:12px;font-weight:700;color:var(--text-dim);margin-bottom:6px;}
+
+/* mini vertical timeline (right column of home page) */
+.mini-timeline{position:relative;padding-left:22px;margin-top:4px;}
+.mini-timeline::before{
+  content:'';position:absolute;left:5px;top:5px;bottom:5px;width:2px;background:var(--border);
+}
+.mini-exp-entry{position:relative;padding-bottom:24px;}
+.mini-exp-entry:last-child{padding-bottom:6px;}
+.mini-exp-entry::before{
+  content:'';position:absolute;left:-22px;top:4px;width:10px;height:10px;
+  border-radius:50%;background:var(--bg);border:2px solid var(--green);
+}
+.mini-exp-date{font-size:11px;font-weight:600;color:var(--text-mute);margin-bottom:3px;}
+.mini-exp-role{font-size:14px;font-weight:700;}
+.mini-exp-company{font-size:12.5px;color:var(--blue);font-weight:600;margin-top:1px;}
+
+/* poster / thumbnail placeholder, used across pages */
+.poster{
+  position:relative;border-radius:4px;overflow:hidden;
+  background:var(--surface);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:transform .15s ease,border-color .15s ease;
+}
+.poster:hover{transform:translateY(-2px);border-color:var(--green);}
+.poster img{width:100%;height:100%;object-fit:contain;display:block;}
+.poster .ph-label{
+  font-size:10.5px;font-weight:700;color:var(--text-mute);
+  text-align:center;padding:6px;line-height:1.3;
+}
+.activity-grid .poster{aspect-ratio:2/3;}
+
+/* ---------- PROJECTS LIST PAGE (letterboxd reviews look) ---------- */
+.project-card{
+  display:block;padding:22px 0;border-bottom:1px solid var(--border);cursor:pointer;
+}
+.project-card:first-child{padding-top:8px;}
+.project-card-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:6px;}
+.project-card-title{font-size:16.5px;font-weight:700;}
+.project-card-title .yr{font-weight:500;color:var(--text-mute);font-size:13px;margin-left:6px;}
+.project-card-tags{display:flex;gap:6px;flex-wrap:wrap;}
+
+.project-card-mid{display:flex;align-items:center;justify-content:space-between;margin:9px 0 12px;}
+.tagrow{display:flex;gap:6px;flex-wrap:wrap;}
+.tagrow .pill{border-color:var(--green-dim);color:var(--green);}
+.avatar-mini{
+  width:26px;height:26px;border-radius:50%;background:var(--surface-2);
+  border:1px solid var(--border);display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;color:var(--text-mute);flex-shrink:0;
+}
+
+.project-card-body{display:flex;gap:14px;}
+.project-card-body .poster{width:76px;height:104px;flex-shrink:0;aspect-ratio:auto;}
+.project-card-summary{
+  font-size:13.5px;line-height:1.6;color:var(--text-dim);
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;
+}
+
+/* ---------- EXPERIENCE PAGE (letterboxd diary look) ---------- */
+.diary-heading{
+  background:var(--bg-alt);border-bottom:1px solid var(--border);border-top:1px solid var(--border);
+  padding:9px 0;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--text-dim);
+  position:sticky;top:97px;
+}
+.exp-entry{display:flex;gap:14px;padding:22px 0;border-bottom:1px solid var(--border);}
+.exp-date{
+  flex-shrink:0;width:58px;text-align:center;color:var(--text-mute);
+  border-right:1px solid var(--border);padding-right:12px;
+  font-size:11.5px;font-weight:600;line-height:1.5;
+}
+.exp-date .start{color:var(--text-dim);font-weight:700;}
+.exp-logo{
+  width:46px;height:46px;flex-shrink:0;border-radius:8px;
+  background:var(--surface);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:800;color:var(--text-mute);overflow:hidden;
+}
+.exp-logo img{width:100%;height:100%;object-fit:cover;}
+.exp-content{flex:1;min-width:0;}
+.exp-role{font-size:15.5px;font-weight:700;}
+.exp-company{font-size:13px;color:var(--blue);font-weight:600;margin-top:1px;}
+.exp-location{font-size:11.5px;color:var(--text-mute);margin-top:2px;}
+.exp-tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0;}
+.exp-desc{font-size:13.5px;line-height:1.65;color:var(--text-dim);margin-top:6px;}
+
+/* ---------- PROJECT DETAIL PAGE ---------- */
+.back-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12.5px;font-weight:700;letter-spacing:.4px;color:var(--text-dim);
+  margin:20px 0 6px;cursor:pointer;
+}
+.back-link:hover{color:var(--green);}
+.detail-title{font-size:22px;font-weight:800;margin:14px 0 2px;}
+.detail-sub{color:var(--text-mute);font-size:13px;margin-bottom:14px;}
+.detail-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;}
+.detail-images{display:flex;gap:10px;margin-bottom:22px;}
+.detail-images .poster{flex:1;aspect-ratio:16/10;}
+.detail-images.single .poster{aspect-ratio:16/9;}
+.detail-desc{font-size:14.5px;line-height:1.8;color:var(--text-dim);white-space:pre-line;}
+.detail-links{display:flex;gap:10px;margin-top:24px;}
+.detail-links a{
+  font-size:12.5px;font-weight:700;letter-spacing:.3px;color:var(--text);
+  border:1px solid var(--border);border-radius:100px;padding:9px 18px;
+}
+.detail-links a:hover{border-color:var(--green);color:var(--green);}
+
+/* ---------- EXTRACURRICULARS (letterboxd journal look) ---------- */
+.journal-card{
+  border-radius:10px;overflow:hidden;margin:18px 0;
+  background:var(--surface);border:1px solid var(--border);cursor:default;
+}
+.journal-card .poster{
+  border:none;border-radius:0;aspect-ratio:16/10;cursor:default;
+}
+.journal-card .poster:hover{transform:none;border-color:transparent;}
+.journal-card-body{padding:16px 18px 20px;}
+.journal-card-title{font-size:16px;font-weight:700;margin-bottom:6px;}
+.journal-card-sub{font-size:13px;line-height:1.55;color:var(--text-dim);}
+
+.placeholder-page{
+  padding:70px 0;text-align:center;color:var(--text-mute);
+}
+.placeholder-page .big{font-size:15px;font-weight:700;color:var(--text-dim);margin-bottom:8px;}
+
+footer{
+  text-align:center;padding:24px 0 34px;color:var(--text-mute);font-size:11.5px;
+  border-top:1px solid var(--border);
+}
+
+@media (min-width:860px){
+  .home-grid{
+    display:grid;
+    grid-template-columns:1.35fr 1fr;
+    gap:56px;
+    align-items:start;
+  }
+  .home-col-right{padding-top:34px;border-left:1px solid var(--border);padding-left:40px;}
+}
+
+@media (max-width:420px){
+  .activity-grid{gap:7px;}
+}
