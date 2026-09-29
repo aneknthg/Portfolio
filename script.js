@@ -79,7 +79,7 @@ const EXPERIENCE = [
     end: "Present",
     tags: ["Vite", "React", "AWS"],
     description: "Co-founded and serve as ML Head of Afterhours, leading the development of a women only social platform.",
-    logo: "images/Afterhours_logo.svg"
+    logo: "images/afterhours.jpeg"
   },
   {
     role: "ML Research Assistant",
@@ -99,7 +99,7 @@ const EXPERIENCE = [
     end: "July 2025",
     tags: ["Edge Computing", "Data Visualization", "Python"],
     description: "Worked with an international client to develop a data visualization dashboard for their edge computing platform.",
-    logo: "images/Tech_Mahindra_logo.jpg"   // "images/company1-logo.jpg"    
+    logo: "images/techm.jpg"   // "images/company1-logo.jpg"    
   }
   // The home page's right-hand timeline pulls role / company / dates
   // straight from this same array — no separate list to maintain.
